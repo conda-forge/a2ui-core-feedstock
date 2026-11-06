@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.4.0"
+  version: "0.5.0"
 
 package:
   name: a2ui-core
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/a2ui-core/a2ui_core-${{ version }}.tar.gz
-  sha256: 840749f45c477a1a4958a64a9c521dca13192693d745cbf45caafb34902ed6fc
+  sha256: ea1d9a59808bd92c13d55b6af9ae5a21ba6f4f8eb3e874ffc8727b92c9e8cc24
 
 build:
   number: 0
@@ -40,15 +40,8 @@ tests:
         - ${{ python_min }}.*
         - "*"
   - script:
-      - python -m pytest tests/ --import-mode=importlib -m "not performance"
-        --ignore=tests/test_codegen_pydantic.py
-        --ignore=tests/test_agent_to_renderer_schema.py
-        --ignore=tests/test_basic_catalog_documents.py
-        --ignore=tests/test_catalog_json.py
-        --ignore=tests/test_common_types_schema.py
-        --ignore=tests/test_conformance.py
-        --ignore=tests/test_peer_catalogs.py
-        --ignore=tests/test_reference_map.py
+      - python -m pytest tests/ --import-mode=importlib -m "not performance" --ignore=tests/test_codegen_pydantic.py --ignore=tests/test_agent_to_renderer_schema.py --ignore=tests/test_basic_catalog_documents.py --ignore=tests/test_catalog_json.py --ignore=tests/test_common_types_schema.py 
+        --ignore=tests/test_conformance.py --ignore=tests/test_peer_catalogs.py --ignore=tests/test_reference_map.py
     files:
       source:
         - tests/

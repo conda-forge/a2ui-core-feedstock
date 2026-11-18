@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.6.0"
+  version: "0.7.0"
 
 package:
   name: a2ui-core
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/a2ui-core/a2ui_core-${{ version }}.tar.gz
-  sha256: c1d149f698981f2cf525b7d409a7873a9a7b8b6c46ab190a393370ce4dcd04b5
+  sha256: fc414e1b961203e29cfd55d53d3d183b884fa40745c5b981fa7afa2ec0aeb396
 
 build:
   number: 0
